@@ -114,6 +114,51 @@ main > section{
     margin-top: 24px;
     margin-bottom: 32px;
 }
+/* some fact related style */
+.fact-card{
+    border: 1px solid #FF900E;
+    width: 240px;
+    height: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.fact-containers{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+/* flex kaj korbe imidiet children er upor.amra crad bananor por joto children 
+asesob guloke 1ta div eh ante hobe */
+.fact-number{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+.fact-description{
+    max-width: 540px;
+}
+/* sponsor info */
+.sponsor-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsor-companies{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+/* important how to conver colorful image to gray image */
+.sponsor-companies img{
+    filter: grayscale(100%);
+}
 
 
 
@@ -122,11 +167,19 @@ main > section{
     .navbar, .nav-links, .teams {
         flex-direction: column;
     }
-    .team-img-container{
+    .team-img-container, .fact-containers, .sponsor-companies{
         grid-template-columns: repeat(1, 1fr);
     }
     .our-features{
         margin-left: 20px;
+    }
+    .fact-containers{
+        justify-items: center;
+        gap: 24px;
+    }
+    .sponsor-companies{
+       justify-items: center;
+        gap: 50px;
     }
 }
 
@@ -138,4 +191,10 @@ main > section{
     .our-features{
         margin-left: 50px auto;
     }
+    .sponsor-companies, .fact-containers{
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+
 }
